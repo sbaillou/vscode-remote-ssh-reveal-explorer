@@ -16,6 +16,24 @@ A VS Code extension that seamlessly opens Windows File Explorer from WSL, allowi
 - Visual Studio Code running in WSL mode
 - PowerShell available on Windows (included by default)
 
+## ☕ Support
+
+If this extension helps you, consider supporting the development:
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-☕-orange.svg?style=flat-square)](https://buymeacoffee.com/doonfrs)
+
+**Your support helps maintain and improve this extension!**
+
+## 🌟 Show Your Support
+
+If you find this extension useful:
+- ⭐ **Star this repository** on GitHub
+- 📝 **Leave a review** on the [VS Code Marketplace](https://marketplace.visualstudio.com/publishers/doonfrs)
+- ☕ **Buy me a coffee** to support development: [buymeacoffee.com/doonfrs](https://buymeacoffee.com/doonfrs)
+
+Every star, review, and coffee means a lot and helps keep this project alive! 🚀
+
+
 ## 🎯 Usage
 
 1. **Open VS Code in WSL** - Make sure you're running VS Code in WSL mode
@@ -66,32 +84,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - GitHub: [@doonfrs](https://github.com/doonfrs)
 - VS Code Marketplace: [doonfrs](https://marketplace.visualstudio.com/publishers/doonfrs)
 
-## ☕ Support
-
-If this extension helps you, consider supporting the development:
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-☕-orange.svg?style=flat-square)](https://buymeacoffee.com/doonfrs)
-
-**Your support helps maintain and improve this extension!**
-
-## 🌟 Show Your Support
-
-If you find this extension useful:
-- ⭐ **Star this repository** on GitHub
-- 📝 **Leave a review** on the [VS Code Marketplace](https://marketplace.visualstudio.com/publishers/doonfrs)
-- ☕ **Buy me a coffee** to support development: [buymeacoffee.com/doonfrs](https://buymeacoffee.com/doonfrs)
-
-Every star, review, and coffee means a lot and helps keep this project alive! 🚀
-
-## 📝 Changelog
-
-### Version 1.0.0
-- Initial release
-- Basic "Reveal in File Explorer" functionality
-- Automatic WSL distribution detection
-- PowerShell-based Windows Explorer integration
-- Zero configuration setup
-
----
-
-**Copyright © 2025 Feras Abdalrahman. All rights reserved.** 
