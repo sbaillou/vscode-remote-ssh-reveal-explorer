@@ -34,10 +34,6 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:wsl-reveal-explorer.revealInExplorer",
-    "onCommand:wsl-reveal-explorer.test"
-  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
