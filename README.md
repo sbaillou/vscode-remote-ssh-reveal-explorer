@@ -30,7 +30,7 @@ If this extension helps you, consider supporting the development:
 
 If you find this extension useful:
 - ⭐ **Star this repository** on GitHub
-- 📝 **Leave a review** on the [VS Code Marketplace](https://marketplace.visualstudio.com/publishers/doonfrs)
+- 📝 **Leave a review** on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=doonfrs.wsl-reveal-explorer)
 - ☕ **Buy me a coffee** to support development: [buymeacoffee.com/doonfrs](https://buymeacoffee.com/doonfrs)
 
 Every star, review, and coffee means a lot and helps keep this project alive! 🚀
