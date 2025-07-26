@@ -1,0 +1,67 @@
+{
+  "name": "wsl-reveal-explorer",
+  "displayName": "WSL Reveal in File Explorer",
+  "description": "Seamlessly open Windows File Explorer from WSL with zero configuration. Right-click any file or folder to reveal it in Windows Explorer.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Feras Abdalrahman",
+    "url": "https://marketplace.visualstudio.com/publishers/doonfrs"
+  },
+  "publisher": "doonfrs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doonfrs/vscode-wsl-reveal-explorer"
+  },
+  "bugs": {
+    "url": "https://github.com/doonfrs/vscode-wsl-reveal-explorer/issues"
+  },
+  "homepage": "https://github.com/doonfrs/vscode-wsl-reveal-explorer#readme",
+  "keywords": [
+    "wsl",
+    "windows",
+    "explorer",
+    "file manager",
+    "reveal",
+    "context menu",
+    "linux",
+    "ubuntu"
+  ],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "wsl-reveal-explorer.revealInExplorer",
+        "title": "Reveal in File Explorer"
+      },
+      {
+        "command": "wsl-reveal-explorer.test",
+        "title": "Test WSL Reveal Extension"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "wsl-reveal-explorer.revealInExplorer",
+          "when": "remoteName == wsl",
+          "group": "navigation@1"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0"
+  }
+} 
