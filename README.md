@@ -2,6 +2,15 @@
 
 A VS Code extension that seamlessly opens Windows File Explorer from WSL, allowing you to reveal files and folders in the native Windows file manager with a simple right-click.
 
+## ☕ Support
+
+If this extension helps you, consider supporting the development:
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-☕-orange.svg?style=flat-square)](https://buymeacoffee.com/doonfrs)
+
+**Your support helps maintain and improve this extension!**
+
+
 ## 🚀 Features
 
 - **Zero Configuration Required** - Works out of the box with any WSL distribution
@@ -16,13 +25,6 @@ A VS Code extension that seamlessly opens Windows File Explorer from WSL, allowi
 - Visual Studio Code running in WSL mode
 - PowerShell available on Windows (included by default)
 
-## ☕ Support
-
-If this extension helps you, consider supporting the development:
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-☕-orange.svg?style=flat-square)](https://buymeacoffee.com/doonfrs)
-
-**Your support helps maintain and improve this extension!**
 
 ## 🌟 Show Your Support
 
