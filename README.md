@@ -1,5 +1,7 @@
 # WSL Reveal in File Explorer
 
+![Demo](https://raw.githubusercontent.com/doonfrs/vscode-wsl-reveal-explorer/0fd24c7d76010f63be84ad18cdd9d532e3185ef0/assets/gif/intro.gif)
+
 A VS Code extension that seamlessly opens Windows File Explorer from WSL, allowing you to reveal files and folders in the native Windows file manager with a simple right-click.
 
 ## ☕ Support
