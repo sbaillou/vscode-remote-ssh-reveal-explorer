@@ -7,6 +7,20 @@
             "command": "echo",
             "args": ["Extension ready to run"],
             "group": "build"
+        },
+        {
+            "label": "VSCE build",
+            "type": "shell",
+            "command": "vsce build",
+            "group": "build"
+        },
+        {
+            "label": "npm: compile",
+            "type": "shell",
+            "command": "npm run compile",
+            "group": "build",
+            "problemMatcher": ["$tsc"],
+            "detail": "Runs npm run compile"
         }
     ]
-} 
+}

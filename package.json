@@ -1,68 +1,96 @@
 {
-  "name": "wsl-reveal-explorer",
-  "displayName": "WSL Reveal in File Explorer",
-  "description": "Seamlessly open Windows File Explorer from WSL with zero configuration. Right-click any file or folder to reveal it in Windows Explorer.",
+  "name": "remote-ssh-reveal-explorer",
+  "displayName": "Remote-SSH Reveal in File Explorer",
+  "description": "Seamlessly open Windows File Explorer from Remote-SSH with zero configuration. Right-click any file or folder to reveal it in Windows Explorer.",
   "version": "1.0.2",
   "icon": "assets/imgs/logo.jpg",
   "author": {
-    "name": "Feras Abdalrahman",
-    "url": "https://marketplace.visualstudio.com/publishers/doonfrs"
+    "name": "Sébastien Baillou",
+    "url": "https://marketplace.visualstudio.com/publishers/sbaillou"
   },
-  "publisher": "doonfrs",
+  "publisher": "sbaillou",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/doonfrs/vscode-wsl-reveal-explorer"
+    "url": "https://github.com/doonfrs/vscode-remote-ssh-reveal-explorer"
   },
   "bugs": {
-    "url": "https://github.com/doonfrs/vscode-wsl-reveal-explorer/issues"
+    "url": "https://github.com/doonfrs/vscode-remote-ssh-reveal-explorer/issues"
   },
-  "homepage": "https://github.com/doonfrs/vscode-wsl-reveal-explorer#readme",
+  "homepage": "https://github.com/doonfrs/vscode-remote-ssh-reveal-explorer#readme",
   "keywords": [
-    "wsl",
+    "remote-ssh",
     "windows",
     "explorer",
     "file manager",
     "reveal",
-    "context menu",
-    "linux",
-    "ubuntu"
+    "context menu"
   ],
   "engines": {
     "vscode": "^1.74.0"
   },
+  "type": "module",
   "categories": [
     "Other"
+  ],
+  "extensionKind": [
+    "ui"
   ],
   "activationEvents": [
     "onStartupFinished"
   ],
-  "main": "./extension.js",
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "wsl-reveal-explorer.revealInExplorer",
-        "title": "Reveal in File Explorer"
+        "command": "remote-ssh-reveal-explorer.revealInExplorer",
+        "title": "Remote-SSH reveal in File Explorer"
       },
       {
-        "command": "wsl-reveal-explorer.test",
-        "title": "Test WSL Reveal Extension"
+        "command": "remote-ssh-reveal-explorer.test",
+        "title": "Test Remote-SSH Reveal Extension"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "wsl-reveal-explorer.revealInExplorer",
-          "when": "remoteName == wsl",
-          "group": "navigation@1"
+          "command": "remote-ssh-reveal-explorer.revealInExplorer",
+          "when": "remoteName == ssh-remote",
+          "group": "navigation"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "remote-ssh-reveal-explorer.revealInExplorer",
+          "when": "remoteName == ssh-remote",
+          "group": "2_files"
         }
       ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "Remote-SSH network path",
+      "properties": {
+        "remote-ssh-reveal-explorer.networkPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the network folder of the Remote-SSH machine."
+        }
+      }
     }
   },
   "scripts": {
-    "test": "echo \"No tests specified\""
+    "test": "echo \"No tests specified\"",
+    "compile": "tsc -p ./",
+    "build": "vcse build",
+    "package": "vsce package"
   },
   "devDependencies": {
+    "@types/node": "^24.1.0",
     "@types/vscode": "^1.74.0"
+  },
+  "dependencies": {
+    "open": "^10.2.0",
+    "path": "^0.12.7"
   }
-} 
+}
