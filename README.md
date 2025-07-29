@@ -2,6 +2,8 @@
 
 A VS Code extension that seamlessly opens Windows File Explorer from Remote-SSH, allowing you to reveal files and folders in the native Windows file manager with a simple right-click.
 
+Forked from: https://github.com/doonfrs/vscode-wsl-reveal-explorer
+
 ## 🚀 Features
 
 - **Context Menu Integration** - Right-click any file or folder to reveal it in Windows Explorer
