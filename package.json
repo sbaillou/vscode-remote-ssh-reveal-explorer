@@ -8,7 +8,7 @@
     "name": "Sébastien Baillou",
     "url": "https://marketplace.visualstudio.com/publishers/sbaillou"
   },
-  "publisher": "Sebastien",
+  "publisher": "sbaillou",
   "license": "MIT",
   "repository": {
     "type": "git",
