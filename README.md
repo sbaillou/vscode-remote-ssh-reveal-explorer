@@ -16,7 +16,7 @@ Forked from: https://github.com/doonfrs/vscode-wsl-reveal-explorer
 ## 🎯 Usage
 
 1. **Open VS Code in Remote-SSH** - Connect to a Remote-SSH host
-1. **Configure network path prefix** - Set the `remote-ssh-reveal-explorer.networkPath` in the settings (globally or per workspace)
+1. **Configure network path prefix** - Set the `remote-ssh-reveal-explorer.networkPath` variable in the settings (globally or per workspace)
 3. **Right-click any file or folder** in the VS Code explorer panel or editor title bar
 4. **Select "Remote-SSH Reveal in File Explorer"** from the context menu
 5. **Windows File Explorer opens** showing the selected file/folder location
