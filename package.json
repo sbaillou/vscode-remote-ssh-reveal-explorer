@@ -2,22 +2,22 @@
   "name": "remote-ssh-reveal-explorer",
   "displayName": "Remote-SSH Reveal in File Explorer",
   "description": "Seamlessly open Windows File Explorer from Remote-SSH with zero configuration. Right-click any file or folder to reveal it in Windows Explorer.",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "icon": "assets/imgs/logo.jpg",
   "author": {
     "name": "Sébastien Baillou",
     "url": "https://marketplace.visualstudio.com/publishers/sbaillou"
   },
-  "publisher": "sbaillou",
+  "publisher": "Sebastien",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/doonfrs/vscode-remote-ssh-reveal-explorer"
+    "url": "https://github.com/sbaillou/vscode-remote-ssh-reveal-explorer"
   },
   "bugs": {
-    "url": "https://github.com/doonfrs/vscode-remote-ssh-reveal-explorer/issues"
+    "url": "https://github.com/sbaillou/vscode-remote-ssh-reveal-explorer/issues"
   },
-  "homepage": "https://github.com/doonfrs/vscode-remote-ssh-reveal-explorer#readme",
+  "homepage": "https://github.com/sbaillou/vscode-remote-ssh-reveal-explorer#readme",
   "keywords": [
     "remote-ssh",
     "windows",
@@ -44,7 +44,7 @@
     "commands": [
       {
         "command": "remote-ssh-reveal-explorer.revealInExplorer",
-        "title": "Remote-SSH reveal in File Explorer"
+        "title": "Remote-SSH Reveal in File Explorer"
       },
       {
         "command": "remote-ssh-reveal-explorer.test",
@@ -56,7 +56,7 @@
         {
           "command": "remote-ssh-reveal-explorer.revealInExplorer",
           "when": "remoteName == ssh-remote",
-          "group": "navigation"
+          "group": "6_copypath@1000"
         }
       ],
       "editor/title/context": [
@@ -69,12 +69,13 @@
     },
     "configuration": {
       "type": "object",
-      "title": "Remote-SSH network path",
+      "title": "Remote-SSH Network Path",
       "properties": {
         "remote-ssh-reveal-explorer.networkPath": {
           "type": "string",
           "default": "",
-          "description": "Path to the network folder of the Remote-SSH machine."
+          "description": "Path to the network folder of the Remote-SSH machine.",
+          "scope": "window"
         }
       }
     }

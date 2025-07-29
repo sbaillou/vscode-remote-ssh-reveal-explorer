@@ -1,59 +1,23 @@
-# WSL Reveal in File Explorer
+# Remote-SSH Reveal in File Explorer
 
-![Demo](https://raw.githubusercontent.com/doonfrs/vscode-wsl-reveal-explorer/0fd24c7d76010f63be84ad18cdd9d532e3185ef0/assets/gif/intro.gif)
-
-A VS Code extension that seamlessly opens Windows File Explorer from WSL, allowing you to reveal files and folders in the native Windows file manager with a simple right-click.
-
-## ☕ Support
-
-If this extension helps you, consider supporting the development:
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-☕-orange.svg?style=flat-square)](https://buymeacoffee.com/doonfrs)
-
-**Your support helps maintain and improve this extension!**
-
+A VS Code extension that seamlessly opens Windows File Explorer from Remote-SSH, allowing you to reveal files and folders in the native Windows file manager with a simple right-click.
 
 ## 🚀 Features
 
-- **Zero Configuration Required** - Works out of the box with any WSL distribution
 - **Context Menu Integration** - Right-click any file or folder to reveal it in Windows Explorer
-- **Automatic WSL Detection** - Dynamically detects your WSL distribution name
-- **Reliable Path Translation** - Converts WSL paths to Windows-compatible UNC paths
-- **Cross-Distribution Support** - Works with Ubuntu, Debian, Alpine, and other WSL distributions
+- **Reliable Path Translation** - Converts UNIX paths to Windows-compatible UNC paths
 
 ## 📋 Prerequisites
 
-- Windows Subsystem for Linux (WSL) or WSL2
-- Visual Studio Code running in WSL mode
-- PowerShell available on Windows (included by default)
-
-
-## 🌟 Show Your Support
-
-If you find this extension useful:
-- ⭐ **Star this repository** on GitHub
-- 📝 **Leave a review** on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=doonfrs.wsl-reveal-explorer)
-- ☕ **Buy me a coffee** to support development: [buymeacoffee.com/doonfrs](https://buymeacoffee.com/doonfrs)
-
-Every star, review, and coffee means a lot and helps keep this project alive! 🚀
-
+- Visual Studio Code running in Remote-SSH mode
 
 ## 🎯 Usage
 
-1. **Open VS Code in WSL** - Make sure you're running VS Code in WSL mode
-2. **Right-click any file or folder** in the VS Code explorer panel
-3. **Select "Reveal in File Explorer"** from the context menu
-4. **Windows File Explorer opens** showing the selected file/folder location
-
-That's it! No configuration needed.
-
-## 🔧 How It Works
-
-The extension automatically:
-- Detects your WSL distribution name
-- Converts Linux paths to Windows UNC format (`\\wsl$\Distribution\path`)
-- Uses PowerShell to reliably open Windows File Explorer
-- Handles path escaping and special characters
+1. **Open VS Code in Remote-SSH** - Connect to a Remote-SSH host
+1. **Configure network path prefix** - Set the `remote-ssh-reveal-explorer.networkPath` in the settings (globally or per workspace)
+3. **Right-click any file or folder** in the VS Code explorer panel or editor title bar
+4. **Select "Remote-SSH Reveal in File Explorer"** from the context menu
+5. **Windows File Explorer opens** showing the selected file/folder location
 
 ## 🛠️ Development
 
@@ -62,7 +26,7 @@ To contribute or modify this extension:
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd vscode-wsl-reveal-explorer
+cd vscode-remote-ssh-reveal-explorer
 
 # Open in VS Code
 code .
@@ -71,20 +35,16 @@ code .
 # Test the functionality by right-clicking files in the explorer
 ```
 
-## 🐛 Troubleshooting
-
-If the extension doesn't work:
-1. Ensure you're running VS Code in WSL mode (not Windows)
-2. Verify that PowerShell is available on your Windows system
-3. Check that Windows File Explorer can access `\\wsl$\<distribution>` paths manually
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
 **Feras Abdalrahman**
 - GitHub: [@doonfrs](https://github.com/doonfrs)
 - VS Code Marketplace: [doonfrs](https://marketplace.visualstudio.com/publishers/doonfrs)
 
+**Sebastien Baillou**
+- GitHub: [@sbaillou](https://github.com/sbaillou)
+- VS Code Marketplace: [sbaillou](https://marketplace.visualstudio.com/publishers/sbaillou)
