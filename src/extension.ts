@@ -12,10 +12,10 @@ export function activate(context) {
   let disposable = vscode.commands.registerCommand('remote-ssh-reveal-explorer.revealInExplorer', async function (uri) {
     console.log('Reveal in Explorer command executed with URI:', uri);
 
-    const filePath = uri.fsPath;
-    console.log('File path:', filePath);
+    const remotePath = uri.fsPath;
+    console.log('File path:', remotePath);
 
-    const dirPath = path.dirname(filePath);
+    const dirPath = path.dirname(remotePath);
     console.log('Remote directory path:', dirPath);
 
     const localPath = networkPath(dirPath);
@@ -42,16 +42,25 @@ export function activate(context) {
 }
 
 function networkPath(remotePath) {
-  // Convert forward slashes to backslashes
-  const winPath = remotePath.replace(/\//g, '\\');
+  // Determine the correct path separator based on the platform
+  const { platform } = process;
+  console.log('Platform:', platform);
+  const locale = path[platform === 'win32' ? 'win32' : 'posix'];
 
-  // Remove "\home" prefix if present
-  const pathWithoutHomePrefix = winPath.startsWith('\\home') ? winPath.slice(5) : winPath;
+  // Replace prefix path separators with local ones
+  const prefixToStrip = vscode.workspace.getConfiguration("remote-ssh-reveal-explorer").get<string>("pathPrefixToStrip");
+  const prefixToStripLocal = prefixToStrip.replace(/[\\/]/g, locale.sep);
+
+  // Remove prefixToStripLocal if present
+  let remotepathWithoutPrefix = remotePath;
+  if (remotePath.startsWith(prefixToStripLocal)) {
+    remotepathWithoutPrefix = remotePath.slice(prefixToStripLocal.length);
+  }
 
   // Compose UNC path
-  const networkPath = vscode.workspace.getConfiguration("remote-ssh-reveal-explorer").get("networkPath");
+  const networkPath = vscode.workspace.getConfiguration("remote-ssh-reveal-explorer").get<string>("networkPath");
 
-  return `${networkPath}${pathWithoutHomePrefix}`;
+  return `${networkPath}${remotepathWithoutPrefix}`;
 }
 
 export function deactivate() { }

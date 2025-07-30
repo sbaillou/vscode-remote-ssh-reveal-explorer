@@ -76,6 +76,12 @@
           "default": "",
           "description": "Path to the network folder of the Remote-SSH machine.",
           "scope": "window"
+        },
+        "remote-ssh-reveal-explorer.pathPrefixToStrip": {
+          "type": "string",
+          "default": "",
+          "description": "Prefix to strip from the remote path.",
+          "scope": "window"
         }
       }
     }
