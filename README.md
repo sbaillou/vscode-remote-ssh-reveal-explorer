@@ -43,10 +43,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Authors
 
-**Feras Abdalrahman**
-- GitHub: [@doonfrs](https://github.com/doonfrs)
-- VS Code Marketplace: [doonfrs](https://marketplace.visualstudio.com/publishers/doonfrs)
-
 **Sebastien Baillou**
 - GitHub: [@sbaillou](https://github.com/sbaillou)
 - VS Code Marketplace: [sbaillou](https://marketplace.visualstudio.com/publishers/sbaillou)
+
+**Feras Abdalrahman (WSL Reveal in File Explorer author) **
+- GitHub: [@doonfrs](https://github.com/doonfrs)
+- VS Code Marketplace: [doonfrs](https://marketplace.visualstudio.com/publishers/doonfrs)

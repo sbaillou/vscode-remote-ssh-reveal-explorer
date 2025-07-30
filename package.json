@@ -69,7 +69,7 @@
     },
     "configuration": {
       "type": "object",
-      "title": "Remote-SSH Network Path",
+      "title": "Remote-SSH Reveal",
       "properties": {
         "remote-ssh-reveal-explorer.networkPath": {
           "type": "string",
@@ -84,7 +84,14 @@
           "scope": "window"
         }
       }
-    }
+    },
+    "keybindings": [
+      {
+        "key": "shift+alt+r",
+        "command": "remote-ssh-reveal-explorer.revealInExplorer",
+        "when": "editorTextFocus && remoteName == 'ssh-remote'"
+      }
+    ]
   },
   "scripts": {
     "test": "echo \"No tests specified\"",

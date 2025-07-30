@@ -9,10 +9,29 @@ export function activate(context) {
   console.log('Remote-SSH reveal Explorer extension is now active!');
   console.log('Extension context:', context.extensionPath);
 
-  let disposable = vscode.commands.registerCommand('remote-ssh-reveal-explorer.revealInExplorer', async function (uri) {
-    console.log('Reveal in Explorer command executed with URI:', uri);
+  let disposable = vscode.commands.registerCommand('remote-ssh-reveal-explorer.revealInExplorer', async function (arg) {
 
-    const remotePath = uri.fsPath;
+    let remotePath = undefined;
+
+    if (arg instanceof vscode.Uri) {
+      // Triggered by right-click on a file in Explorer
+     console.log(`Right-clicked file: ${arg.fsPath}`);
+      remotePath = arg.fsPath;
+    } else {
+      // Likely triggered by a shortcut, button, or manually
+      const editor = vscode.window.activeTextEditor;
+      if (editor) {
+        const doc = editor.document;
+        console.log(`Shortcut on active file: ${doc.uri.fsPath}`);
+        remotePath = doc.uri.fsPath;
+      } else {
+        console.log('No editor is active');
+        remotePath = undefined
+      }
+    }
+
+    console.log('Reveal in Explorer command executed with path:', remotePath);
+
     console.log('File path:', remotePath);
 
     const dirPath = path.dirname(remotePath);
