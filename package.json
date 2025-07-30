@@ -2,7 +2,7 @@
   "name": "remote-ssh-reveal-explorer",
   "displayName": "Remote-SSH Reveal in File Explorer",
   "description": "Seamlessly open Windows File Explorer from Remote-SSH. Right-click any file or folder to reveal it in Windows Explorer.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "icon": "assets/imgs/logo.png",
   "author": {
     "name": "Sébastien Baillou",
